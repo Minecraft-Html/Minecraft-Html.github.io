@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aim Trainer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Aim Trainer</h1>
+        <p>Score: <span id="score">0</span></p>
+        <p>Time Remaining: <span id="timer">30</span> seconds</p>
+        <div id="target-container">
+            <!-- Using local image here -->
+            <img id="target" src="images/scribble-circle-outline-transparent-1.png" alt="Target" draggable="false">
+        </div>
+        <button id="start-button">Start Game</button>
+    </div>
+
+    <!-- Game Over Popup -->
+    <div id="game-over-popup" class="popup">
+        <div class="popup-content">
+            <h2>Game Over</h2>
+            <p>Your Score: <span id="final-score">0</span></p>
+            <button id="ok-button">Ok</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
