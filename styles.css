@@ -1,0 +1,205 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a4c93, #2a0d3d); /* Elegant purple to dark gradient */
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    user-select: none; /* Disable text selection */
+}
+
+/* Game Container */
+.game-container {
+    background: rgba(0, 0, 0, 0.75); /* Semi-transparent black */
+    padding: 40px;
+    border-radius: 20px;
+    width: 400px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 36px;
+    color: #9c4d96; /* Soft purple */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Score and Timer Styling */
+p {
+    font-size: 22px;
+    color: #d1b7d1;
+    margin: 10px 0;
+}
+
+#score, #timer {
+    font-weight: bold;
+    color: #9c4d96;
+    font-size: 28px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Target Container */
+#target-container {
+    position: relative;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid #9c4d96;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 30px 0;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+/* Target Styling */
+#target {
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    pointer-events: auto; /* Ensure target is clickable */
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+}
+
+/* Hover Effect on Target */
+#target:hover {
+    transform: scale(1.2);
+}
+
+/* Start Button Styling */
+button {
+    background-color: #9c4d96; /* Soft purple */
+    color: white;
+    padding: 12px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #7a3d7e; /* Darker purple on hover */
+    transform: translateY(-4px); /* Lift effect */
+}
+
+button:active {
+    transform: translateY(1px); /* Slight pressed effect */
+}
+
+/* Game Over Popup Styling */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease;
+}
+
+.popup-content {
+    background-color: #fff;
+    color: #333;
+    padding: 25px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    animation: popUp 0.4s ease-out;
+}
+
+.popup h2 {
+    font-size: 28px;
+    color: #9c4d96;
+    margin-bottom: 10px;
+}
+
+.popup p {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#ok-button {
+    background-color: #9c4d96;
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#ok-button:hover {
+    background-color: #7a3d7e;
+}
+
+/* Animations for Popup */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popUp {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .game-container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    #score, #timer {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 22px;
+    }
+
+    .popup-content {
+        width: 85%;
+    }
+
+    #ok-button {
+        font-size: 16px;
+    }
+}
